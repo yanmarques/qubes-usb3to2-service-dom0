@@ -12,12 +12,11 @@ As stated in [Qubes FAQ](https://www.qubes-os.org/faq/), when you get strict res
 git clone git@github.com:yanmarques/qubes-usb3to2-service-dom0.git
 ```
 
-- check gpg signature:
-  - first one must get my public key:
+- check gpg signature, first one must get the public key:
 ```bash
 $ gpg2 --keyserver keys.gnupg.net --recv-keys 0xB677080945DF2D38C7C5F15F80AB0F5FDECFB4A9
 ```
-as Qubes itself always confirm, [distrust the infrastructure](https://www.qubes-os.org/faq/#what-does-it-mean-to-distrust-the-infrastructure), so you may also check the public from another keyserver, from github [gpg keys api](https://developer.github.com/v3/users/gpg_keys/#list-gpg-keys-for-a-user), etc...
+as Qubes itself always confirm, [distrust the infrastructure](https://www.qubes-os.org/faq/#what-does-it-mean-to-distrust-the-infrastructure), you may also check the public key from another keyserver, from github [gpg keys api](https://developer.github.com/v3/users/gpg_keys/#list-gpg-keys-for-a-user), etc...
 
   - verify repo tag, inside cloned directory:
 ```bash
