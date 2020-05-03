@@ -7,16 +7,27 @@ As stated in [Qubes FAQ](https://www.qubes-os.org/faq/), when you get strict res
 ***Take a further look at their FAQ, in the strict reset [section](https://www.qubes-os.org/faq/#i-created-a-usbvm-and-assigned-usb-controllers-to-it-now-the-usbvm-wont-boot)***
 
 # Installing
-- download it [here](https://github.com/yanmarques/qubes-usb3to2-service-dom0/archive/master.zip)
-
-- extract it:
+- clone the repo in some domU with network access:
 ```bash
-$ unzip master.zip
+git clone git@github.com:yanmarques/qubes-usb3to2-service-dom0.git
 ```
 
-- copy `qubes-usb3to2-service-dom0-master` directory to dom0, see [how to do it](https://www.qubes-os.org/doc/copy-from-dom0/#copying-to-dom0)
+- check gpg signature:
+  - first one must get my public key:
+```bash
+$ gpg2 --keyserver keys.gnupg.net --recv-keys 0xB677080945DF2D38C7C5F15F80AB0F5FDECFB4A9
+```
+as Qubes itself always confirm, [distrust the infrastructure](https://www.qubes-os.org/faq/#what-does-it-mean-to-distrust-the-infrastructure), so you may also check the public from another keyserver, from github [gpg keys api](https://developer.github.com/v3/users/gpg_keys/#list-gpg-keys-for-a-user), etc...
 
-- in dom0 terminal, inside `qubes-usb3to2-service-dom0` type:
+  - verify repo tag, inside cloned directory:
+```bash
+git tag -v v0.1
+```
+one should see a `Good signature`, otherwhise go back and repeate above steps or search for help.
+
+- copy the directory to dom0, see [how to do it](https://www.qubes-os.org/doc/copy-from-dom0/#copying-to-dom0)
+
+- in dom0 terminal, inside the directory one copied, type:
 ```bash
 $ sudo make install
 ```
