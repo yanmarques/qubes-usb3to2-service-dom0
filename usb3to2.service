@@ -1,0 +1,9 @@
+[Unit]
+Description=Force all USB3.0 devices to work as USB2.0
+After=qubes-vm@sys-usb.service
+
+[Service]
+ExecStart=/usr/bin/usb3to2
+
+[Install]
+WantedBy=multi-user.target
