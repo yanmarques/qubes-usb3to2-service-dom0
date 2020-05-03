@@ -24,7 +24,7 @@ $ sudo make install
 # Questions
 - I use sys-net or whatever as my usb domain, so?
   
-  R: Fair enough, go to usb3to2.service and change `qubes-vm@sys-usb.service` to `qubes-vm@whatever-you-user-as-usb-domain.service`. If you have already installed it, just install it again and it should overwrite the old version.
+  R: Fair enough, go to usb3to2.service and change `qubes-vm@sys-usb.service` to `qubes-vm@WHATEVER-YOU-USE-AS-USB-DOMAIN.service`. If you have already installed it, just install it again and it should overwrite the old version.
 
 - After the screen has been locked, my devices disappears, so?
   
